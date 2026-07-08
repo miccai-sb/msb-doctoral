@@ -101,6 +101,10 @@ body {
     align-items: center;
 }
 
+.nav-menu li {
+    flex-shrink: 0;
+}
+
 .nav-link {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.85);
@@ -110,6 +114,7 @@ body {
     border-radius: 8px;
     transition: all 0.25s ease;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -133,6 +138,22 @@ body {
     color: var(--white) !important;
     transform: translateY(-1px);
     box-shadow: 0 4px 16px rgba(0, 174, 239, 0.45);
+}
+
+.nav-link-camera-ready {
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    border-radius: 100px !important;
+    padding: 0.4rem 0.95rem !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    margin-left: 0.15rem;
+}
+
+.nav-link-camera-ready:hover,
+.nav-link-camera-ready.active {
+    border-color: var(--cyan) !important;
+    background: rgba(0, 174, 239, 0.12) !important;
+    color: var(--cyan) !important;
 }
 
 .hamburger {
@@ -1045,6 +1066,10 @@ section { padding: 90px 0; }
 @media (max-width: 1024px) {
     .hero-title { font-size: 3.2rem; }
     .contact-info { grid-template-columns: repeat(2, 1fr); }
+    .logo-text { font-size: 0.9rem; }
+    .nav-link { font-size: 0.85rem; padding: 0.45rem 0.65rem; }
+    .nav-link-submit { padding: 0.4rem 1rem !important; }
+    .nav-link-camera-ready { padding: 0.38rem 0.85rem !important; font-size: 0.82rem !important; }
 }
 
 @media (max-width: 768px) {
